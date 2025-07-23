@@ -1,8 +1,12 @@
+import Grid from "./components/Grid";
+import Title from "./components/Title";
+import { filmes } from "@/lib/filmes";
 
 export default function Home() {
   return (
     <>
-      <h1>Cinelista</h1>
+      <Title title="Filmes em destaque" />
+      <Grid filmes={filmes} />
     </>
   );
 }
