@@ -1,0 +1,25 @@
+.header {
+  background-color: black;
+  padding: 1rem 2rem;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.header__nav a {
+  color: #ccc;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+.header__nav a:hover {
+  color: red;
+}
