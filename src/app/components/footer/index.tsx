@@ -1,8 +1,13 @@
+import styles from "./footer.module.css";
+
 const Footer = () => {
     return (
-        <footer>
-            <p>© 2025 Cinelista</p>
-        </footer>
+      <footer className={styles.footer}>
+        <p className="footer__text">
+          &copy; {new Date().getFullYear()} Cinelista - Todos os direitos
+          reservados
+        </p>
+      </footer>
     );
 }
 
