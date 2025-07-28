@@ -52,6 +52,7 @@ import { getMovieDetails } from "@/lib/api/tmdb";
             <article className={styles.detalhe__info}>
               <h2>{title}</h2>
               <p>{overview}</p>
+              <p>Nota: {vote_average}</p>
             </article>
           </section>
         </div>
