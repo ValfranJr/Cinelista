@@ -29,3 +29,8 @@
 .card__poster {
     display: block;
 }
+
+.card__rating {
+  color: #e50914;
+  font-size: 0.8rem;
+}
