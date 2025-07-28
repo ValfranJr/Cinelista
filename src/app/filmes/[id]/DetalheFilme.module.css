@@ -13,8 +13,7 @@
 }
 
 .detalhe__imagem{
-    width: 600px;
-    height: 300px;
+    height: 480px;
     border-radius: 8px;
     object-fit: cover;
 }
