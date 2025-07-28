@@ -1,0 +1,46 @@
+.detalhe{
+    padding: 40px;
+    max-width: 960px;
+    margin: auto;
+}
+
+.detalhe__container{
+    display: flex;
+    gap: 32px;
+    background-color: #1f1f1f;
+    padding: 24px;
+    border-radius: 8px;
+}
+
+.detalhe__imagem{
+    width: 600px;
+    height: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.detalhe__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.detalhe__info h2{
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    color: #e50914
+}
+
+.detalhe__info p{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+.detalhe__voltar{
+    display: block;
+    text-align: right;
+    margin-bottom: 24px;
+    color: #e50914;
+    font-weight: 500;
+}
