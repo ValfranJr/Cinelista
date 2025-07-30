@@ -3,7 +3,6 @@ import "@/styles/globals.css";
 import Header from "./components/Header/Index";
 import Footer from "./components/footer";
 
-
 export const metadata: Metadata = {
   title: "Cinelista",
   description: "Site para ver os filmes de cinema",
@@ -16,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body >
+      <body>
         <Header />
         {children}
         <Footer />

@@ -3,37 +3,37 @@ import { notFound } from "next/navigation";
 import styles from "./DetalheFilme.module.css";
 import { getMovieDetails } from "@/lib/api/tmdb";
 
- type Props = {
+type Props = {
   params: Promise<{
     id: number;
-  }>
+  }>;
 };
 
-  export const generateMetadata = async ({ params }: Props) => {
-    const { id } = await params;
-   const details = await getMovieDetails(id);
-    if (!details)
-      return;
-    return {
+export const generateMetadata = async ({ params }: Props) => {
+  const { id } = await params;
+  const details = await getMovieDetails(id);
+  if (!details) return;
+  return {
+    title: `${details.title} | Cinelista`,
+    description: details.overview,
+    openGraph: {
       title: `${details.title} | Cinelista`,
       description: details.overview,
-      openGraph: {
-        title: `${details.title} | Cinelista`,
-        description: details.overview,
-        images: [`${process.env.NEXT_PUBLIC_TMDB_API_IMG_URL}${details.poster_path}`]
-      }
-    };
+      images: [
+        `${process.env.NEXT_PUBLIC_TMDB_API_IMG_URL}${details.poster_path}`,
+      ],
+    },
   };
+};
 
- const DetalheFilme = async({params}: Props) => {
-    const { id } = await params;
+const DetalheFilme = async ({ params }: Props) => {
+  const { id } = await params;
 
-    const details = await getMovieDetails(id);
+  const details = await getMovieDetails(id);
 
-    if (!details)
-      return notFound();
+  if (!details) return notFound();
 
-    const { title, overview, poster_path, vote_average } = details;
+  const { title, overview, poster_path, vote_average } = details;
   return (
     <>
       <div className={styles.detalhe}>

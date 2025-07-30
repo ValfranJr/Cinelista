@@ -5,13 +5,13 @@ import { getPopularMovies } from "@/lib/api/tmdb";
 export const revalidate = 60;
 
 const FilmesPopulares = async () => {
-    const filmes = await getPopularMovies();
-    return (
-        <>
-            <Title title="Filmes Populares" />
-            <Grid filmes={filmes} />
-        </>
-    );
-}
+  const filmes = await getPopularMovies();
+  return (
+    <>
+      <Title title="Filmes Populares" />
+      <Grid filmes={filmes} />
+    </>
+  );
+};
 
 export default FilmesPopulares;
