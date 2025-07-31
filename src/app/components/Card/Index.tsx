@@ -1,6 +1,7 @@
 import { Filme } from "@/types/types";
 import styles from "./Card.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 type Props = {
   filme: Filme;
@@ -13,7 +14,7 @@ const Card = ({ filme }: Props) => {
   return (
     <div key={id} className={styles.card}>
       <Link href={`/filmes/${id}`}>
-        <img
+        <Image
           className={styles.card__poster}
           src={`${process.env.NEXT_PUBLIC_TMDB_API_IMG_URL}${poster_path}`}
           alt={`Poster do Filme ${title}`}

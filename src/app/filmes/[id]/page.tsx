@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import styles from "./DetalheFilme.module.css";
 import { getMovieDetails } from "@/lib/api/tmdb";
+import Image from "next/image";
 
 type Props = {
   params: Promise<{
@@ -43,7 +44,7 @@ const DetalheFilme = async ({ params }: Props) => {
           </Link>
           <section>
             <figure>
-              <img
+              <Image
                 className={styles.detalhe__imagem}
                 src={`${process.env.NEXT_PUBLIC_TMDB_API_IMG_URL}${poster_path}`}
                 alt={details?.title}
