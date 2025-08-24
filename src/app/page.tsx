@@ -7,7 +7,11 @@ export default async function Home() {
   return (
     <>
       <Title title="Filmes em destaque" />
-      <Grid filmes={filmes} />
+      {filmes.length === 0 ? (
+        <p>Nenhum filme encontrado</p>
+      ) : (
+        <Grid filmes={filmes} />
+      )}{" "}
     </>
   );
 }
