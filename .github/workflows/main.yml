@@ -50,6 +50,6 @@ jobs:
       - name: Rodar Lint
         run: npm run lint
       - name: Verificar Formatação
-        run: npm format -- -- check
+        run: npm format
       - name: Rodar Testes
         run: npm run test
