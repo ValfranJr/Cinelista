@@ -10,7 +10,7 @@ type Props = {
 
 const Card = ({ filme }: Props) => {
   const { title, id, overview, poster_path, vote_average } = filme;
-  const resume = useResumoFilme(overview,256);
+  const resume = useResumoFilme(overview, 256);
   return (
     <div key={id} className={styles.card}>
       <Link href={`/filmes/${id}`}>

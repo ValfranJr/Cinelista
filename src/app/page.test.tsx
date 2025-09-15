@@ -31,7 +31,7 @@ test("Renderiza os filmes em destaque corretamente", async () => {
   // verifica se os filmes em destaque são renderizados corretamente
   expect(screen.getByText("Filme teste")).toBeInTheDocument();
 });
-test ("Exibir uma mensagem quando não houver filmes disponíveis", async () => {
+test("Exibir uma mensagem quando não houver filmes disponíveis", async () => {
   (getTrendingMovies as jest.Mock).mockResolvedValue([]);
   render(await Home());
 
