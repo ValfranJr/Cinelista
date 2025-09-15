@@ -4,7 +4,7 @@ name: Pipeline CI/CD
 on: 
   push:
     branches:
-      - master
+      - main
     paths: # só dispara se arquivos nessas pastas mudarem
       - "src/**" # só mudanças no código fonte
       - "github/workflows/**" # mudanças nos próprios pipelines
